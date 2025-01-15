@@ -8,11 +8,34 @@
 
 
 class Employee {
-  // YOUR CODE HERE
+  //private
+  #name
+  #position
+  //constructor
+  constructor(name,position){
+    this.#name = name
+    this.#position = position
+  }
+
+  introduce(){
+    return `Hi, I am ${this.#name}, a ${this.#position}`
+  }
 }
 
 class Manager extends Employee {
-  // YOUR CODE HERE
+  // private
+  #department
+
+  //constructor
+  constructor(name,position,deparment){
+    super(name,position)
+    this.#department = deparment
+  }
+
+  //override the introducction
+  introduce(){
+    return `${super.introduce()} in the ${this.#department} deparment`
+  }
 }
 
 
